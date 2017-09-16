@@ -38,6 +38,7 @@ php /var/www/html/artisan optimize
 chmod 777 -R /var/www/html/bootstrap/cache
 chmod 777 -R /var/www/html/storage
 chmod 777 -R /var/www/html/public/files/
+chown -R apache:apache /var/www/html/
 
 # Replace environment variables
 sed -e '/\(^APP_URL=\).*/ s//\1http:\/\/localhost/' -i .env
