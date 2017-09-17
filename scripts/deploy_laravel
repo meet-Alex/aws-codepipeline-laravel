@@ -38,7 +38,7 @@ php /var/www/html/artisan optimize
 chmod 777 -R /var/www/html/bootstrap/cache
 chmod 777 -R /var/www/html/storage
 chmod 777 -R /var/www/html/public/files/
-chown -R apache:apache /var/www/html/
+chown -R www:www /var/www/html/
 chmod +r /var/www/html/
 
 # Replace environment variables
