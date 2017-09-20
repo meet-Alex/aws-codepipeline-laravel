@@ -21,7 +21,7 @@ yum install -y php71 php71-cli php71-fpm php71-mysql php71-xml php71-curl php71-
 yum -y install httpd24
 
 # Allow URL rewrites
-sed -i 's#AllowOverride None#AllowOverride All#' /etc/httpd/conf/httpd.conf
+#sed -i 's#AllowOverride None#AllowOverride All#' /etc/httpd/conf/httpd.conf
 
 # Change apache document root
 mkdir -p /var/www/html/public
