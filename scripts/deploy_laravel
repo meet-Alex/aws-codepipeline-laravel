@@ -38,19 +38,19 @@ php /var/www/html/artisan optimize
 chmod 777 -R /var/www/html/bootstrap/cache
 chmod 777 -R /var/www/html/storage
 chmod 777 -R /var/www/html/public/files/
-chown -R root:root /var/www/html/
-cd /var/www/html/
-find . -type d -exec chmod 0755 {} \;
-find . -type f -exec chmod 0644 {} \;
+#chown -R root:root /var/www/html/
+#cd /var/www/html/
+#find . -type d -exec chmod 0755 {} \;
+#find . -type f -exec chmod 0644 {} \;
 
 # Replace environment variables
-sed -e '/\(^APP_URL=\).*/ s//\1http:\/\/localhost/' -i .env
-sed -e '/\(^APP_DEBUG=\).*/ s//\1false/' -i .env
-sed -e '/\(^APP_NAME=\).*/ s//\1laravel/' -i .env
-sed -e '/\(^APP_KEY=\).*/ s//\1base64:awH2+cVts6F2AFbXIcTx0t5nd2GbCkkzkY+Tw\/tYQDM=/' -i .env
-sed -e '/\(^DB_DATABASE=\).*/ s//\1database/' -i .env
-sed -e '/\(^DB_USERNAME=\).*/ s//\1username/' -i .env
-sed -e '/\(^DB_PASSWORD=\).*/ s//\1password/' -i .env
+#sed -e '/\(^APP_URL=\).*/ s//\1http:\/\/localhost/' -i .env
+#sed -e '/\(^APP_DEBUG=\).*/ s//\1false/' -i .env
+#sed -e '/\(^APP_NAME=\).*/ s//\1laravel/' -i .env
+#sed -e '/\(^APP_KEY=\).*/ s//\1base64:awH2+cVts6F2AFbXIcTx0t5nd2GbCkkzkY+Tw\/tYQDM=/' -i .env
+#sed -e '/\(^DB_DATABASE=\).*/ s//\1database/' -i .env
+#sed -e '/\(^DB_USERNAME=\).*/ s//\1username/' -i .env
+#sed -e '/\(^DB_PASSWORD=\).*/ s//\1password/' -i .env
 
 # Bring up application
 php /var/www/html/artisan up
