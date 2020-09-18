@@ -16,7 +16,12 @@ mkdir -p /var/www/html/storage/framework/cache
 mkdir -p /var/www/html/public/files/
 
 # Configure Env
-cp /var/www/html/.env.example /var/www/html/.env
+if [[ -f "/var/www/html/.env" ]]
+then
+    echo "An environment file already exists; please run: diff --side-by-side /var/www/html/.env.example /var/www/html/.env"
+else
+    cp /var/www/html/.env.example /var/www/html/.env
+fi
 
 # Install dependencies
 cd /var/www/html/ && composer install
